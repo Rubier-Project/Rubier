@@ -8,9 +8,9 @@ Use Rubier to Have a Better Access of Rubino !
 # How to Use? ( Usage )
 first download the library
 
-`pip install rubier`
++ `pip install rubier`
 if you need mirror:
-`pip install --trusted-host https://pypi.tuna.tsinghua.edu.cn -i https://pypi.tuna.tsinghua.edu.cn/simple/ rubier`
++ `pip install --trusted-host https://pypi.tuna.tsinghua.edu.cn -i https://pypi.tuna.tsinghua.edu.cn/simple/ rubier`
 
 after that open your ide and import library
 ```
