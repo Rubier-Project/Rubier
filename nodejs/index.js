@@ -6,7 +6,7 @@ class Rubier{
     constructor(auth, Proxy){
         this.auth = auth;
         this.proxy = Proxy ? Proxy : undefined || null;
-        this.network = new NetworkHandler(this.auth);
+        this.network = new NetworkHandler(this.auth, this.proxy);
     }
 
     addPostViewCount({
