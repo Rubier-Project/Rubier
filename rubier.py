@@ -174,7 +174,7 @@ class Rubier(object):
     def followPage(self, followID, profileID = None):
         return httpz.Httpz(self.auth).poolConnection({
             "f_type": "Follow",
-            "followee_id": followID,
+            "follow_id": followID,
             "profile_id": profileID
         }, "requestFollow")
 
