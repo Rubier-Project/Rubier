@@ -6,7 +6,7 @@ class Rubier{
     constructor(auth, Proxy){
         this.auth = auth;
         this.proxy = Proxy ? Proxy : undefined || null;
-        this.network = new NetworkHandler(this.auth, this.proxy);
+        this.network = new NetworkHandler(this.auth);
     }
 
     addPostViewCount({
@@ -616,6 +616,62 @@ class Rubier{
             callback: (resp) => {
                 if (callback === null){true;}else{
                     callback(resp.data.profile);
+                }
+            }
+        })
+    }
+
+    getGuidByUsername({
+        username = "",
+        callback = null
+    } = {}){
+        this.isExistUsername({
+            username: username,
+            callback: (userGuid) => {
+                if (callback === null){true;}else{
+                    callback(userGuid.data.profile.chat_link.open_chat_data.object_guid);
+                }
+            }
+        })
+    }
+
+    getProfileIdByUsername({
+        username = "",
+        callback = null
+    } = {}){
+        this.isExistUsername({
+            username: username,
+            callback: (userGuid) => {
+                if (callback === null){true;}else{
+                    callback(userGuid.data.profile.id);
+                }
+            }
+        })
+    }
+
+    getBioByUsername({
+        username = "",
+        callback = null
+    } = {}){
+        this.isExistUsername({
+            username: username,
+            callback: (userGuid) => {
+                if (callback === null){true;}else{
+                    callback(userGuid.data.profile.bio);
+                }
+            }
+        })
+    }
+
+    getNameByUsername({
+        username = "",
+        callback = null
+    } = {}){
+        this.isExistUsername({
+            username: username,
+            callback: (userGuid) => {
+                if (callback === null){true;}else{
+                    callback(userGuid.data.profile.name);
                 }
             }
         })
