@@ -729,7 +729,7 @@ class Rubier{
                 new axiosClass.Axios("POST").post(url, JSON.stringify(json_data), {
                     data: bytes
                 }).then((responez) => {
-                    let datas = JSON.parse(responez.data).data.hash_file_receive;
+                    let datas = JSON.parse(responez.data);
                     if (callback === null){true;}else{
                         callback(datas);
                     }
