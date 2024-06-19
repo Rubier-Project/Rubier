@@ -1,6 +1,6 @@
 # NodeJS Rubier Version
 
-```nodejs
+```js
 const { Rubier } = require("./index");
 const app = new Rubier("AUTH");
 
