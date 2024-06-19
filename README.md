@@ -13,14 +13,14 @@ first download the library
 + `pip install --trusted-host https://pypi.tuna.tsinghua.edu.cn -i https://pypi.tuna.tsinghua.edu.cn/simple/ rubier`
 
 after that open your ide and import library
-```
+```python
 from rubier import rubier
 app = rubier.Rubier("AUTH")
 ```
 + Replace your auth to 'AUTH'
 
 # How to see the methods?
-```
+```python
 from rubier import rubier
 print(dir(rubier.Rubier))
 ```
